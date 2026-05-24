@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+  --bg: 0 0% 4%;
+  --surface: 0 0% 8%;
+  --text: 0 0% 96%;
+  --muted: 0 0% 53%;
+  --stroke: 0 0% 12%;
+  --accent: 0 0% 96%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: hsl(var(--bg));
+  color: hsl(var(--text));
+}
+
+/* Typography utilities */
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-display {
+  font-family: 'Instrument Serif', serif;
+}
+
+/* Color utilities */
+.bg-bg {
+  background-color: hsl(var(--bg));
+}
+
+.bg-surface {
+  background-color: hsl(var(--surface));
+}
+
+.text-text-primary {
+  color: hsl(var(--text));
+}
+
+.text-muted {
+  color: hsl(var(--muted));
+}
+
+.border-stroke {
+  border-color: hsl(var(--stroke));
+}
+
+.bg-stroke {
+  background-color: hsl(var(--stroke));
+}
+
+/* Accent gradient */
+.accent-gradient {
+  background: linear-gradient(90deg, #89AACC 0%, #4E85BF 100%);
+}
+
+/* Custom animations */
+@keyframes scroll-down {
+  0%, 100% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(200%);
+  }
+}
+
+.animate-scroll-down {
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
+
+@keyframes role-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-role-fade-in {
+  animation: role-fade-in 0.4s ease-out;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+}
